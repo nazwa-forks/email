@@ -470,7 +470,6 @@ func (e *Email) SendCustomTls(addr string, a smtp.Auth, tlsConfig *tls.Config) e
 		return err
 	}
 
-	// config := &tls.Config{ServerName: "gymbox.co.uk", InsecureSkipVerify: true}
 	if err = c.StartTLS(tlsConfig); err != nil {
 		return err
 	}
